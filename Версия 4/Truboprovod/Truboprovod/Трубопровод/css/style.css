@@ -1,0 +1,136 @@
+#outerspace{
+    position: relative; 
+    height:100vh; 
+    width:100%;
+    -webkit-transition: 10s ease-in; 
+    -moz-transition: 10s ease-in; 
+    -o-transition: 10s ease-in;
+    transition: 10s ease-in; 	
+	background: url(../images/bg.JPG);
+    background-size: cover; 	
+}
+
+.game_list{
+	width: 600px;
+	height: 600px;
+	top:0px;
+    right: 20px;
+    position: absolute;
+}
+.game_pole{
+	margin: 0 auto;
+	width: 600px;
+	background: #231f20;
+	height: 600px;
+}
+.game_pole > div {
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	background: #231f20;
+	border:1px solid #fff;
+}
+.game_pole > div:nth-child(10n+1){
+	clear: both;
+}
+/*ТРУБЫ*/
+.pipe {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 60px;
+}
+.start >.pipe{
+	background: url(../images/unnamed.png) no-repeat;
+	background-position: -8px -7px;
+	overflow: hidden;
+}
+/*прямые трубы*/
+.lines >.pipe {
+	background: url(../images/unnamed.png) no-repeat;
+	background-position: -64px -7px;
+}
+.lines > .rotation-1{
+	background-position: -64px -7px;	
+}
+.lines > .rotation-3{
+	background-position: -64px -7px;	
+}
+.lines > .rotation-2{
+	background-position: -235px -64px	
+}
+.lines > .rotation-4{
+	background-position: -235px -64px	
+}
+/*изогнутые трубы*/
+.arc >.pipe {
+	background: url(../images/unnamed.png) no-repeat;
+	background-position: -121px -7px;
+}
+.arc > .rotation-1{
+	background-position: -121px -7px;	
+}
+.arc > .rotation-4{
+	background-position: -8px -235px;	
+}
+.arc > .rotation-2{
+	background-position: -64px -121px;	
+}
+.arc > .rotation-3{
+	background-position: -235px -7px;
+}
+/*ТРУБЫ конец*/ 
+.starts{
+	position:absolute;
+	display:block;
+	top:50px;
+	right:650px;
+	border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 85px;
+}
+
+
+/*animation rocket*/
+div.rocket div { 
+    position: absolute;
+    /* начальное положение ракеты */
+    bottom: 0; 
+    left: 20px; 
+    /* устанавливаем эффект перехода между двумя состояниями блока с изображением */
+    -webkit-transition: 3s ease-in; 
+    -moz-transition: 3s ease-in; 
+    -o-transition: 3s ease-in; 
+    transition: 3s ease-in; 
+} 
+div.rocket div img { 
+    /* устанавливаем эффект перехода между двумя состояниями изображения */
+    -webkit-transition: 2s ease-in-out; 
+    -moz-transition: 2s ease-in-out; 
+    -o-transition: 2s ease-in-out; 
+    transition: 2s ease-in-out; 
+} 
+/* конечная позиция */ 
+#outerspace:hover div.rocket div { 
+    /* смещаем блок с изображением ракеты на заданные X и Y */
+    -webkit-transform: translate(645px,-280px); 
+    -moz-transform: translate(645px,-280px); 
+    -o-transform: translate(645px,-280px); 
+    -ms-transform: translate(645px,-280px); 
+    transform: translate(645px,-280px); 
+} 
+#outerspace:hover div.rocket div img {
+    /* поворачиваем изображение ракеты на 56 градусов по часовой */
+    -webkit-transform: rotate(56deg); 
+    -moz-transform: rotate(56deg); 
+    -o-transform: rotate(56deg); 
+    -ms-transform: rotate(56deg); 
+    transform: rotate(56deg); 
+    /* одновременно уменьшая его до 30px по ширине и 70px по высоте */
+    width:30px;
+    height:70px;
+}	
